@@ -14,7 +14,7 @@
         %li.btn=link_to "設文章狀態", "#", :title => "設文章狀態"
         %li.btn=link_to "設定回應", "#", :title => "設定回應"
         %li.btn=link_to "置頂", "#", :title => "置頂"
-        %li.btn=link_to "刪除", "#", :title => "刪除"
+        %li.btn.delete=link_to "刪除", "#", :title => "刪除"
       %span.select 
         顯示篇數
         %select
@@ -26,12 +26,24 @@
         %tr
           %th
             %input{:type => "checkbox"}
-          %th 日期
-          %th 標題
-          %th 全站分類
-          %th 個人分類
-          %th 文章狀態
-          %th 回應
+          %th 
+            日期
+            %span.arrow=link_to "", "#"
+          %th
+            標題
+            %span.arrow=link_to "", "#"
+          %th
+            全站分類
+            %span.arrow=link_to "", "#"
+          %th
+            個人分類
+            %span.arrow=link_to "", "#"
+          %th
+            文章狀態
+            %span.arrow=link_to "", "#"
+          %th
+            回應
+            %span.arrow=link_to "", "#"
           %th 編輯
       %tbody
         %tr

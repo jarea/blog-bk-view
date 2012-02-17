@@ -1,6 +1,6 @@
 .manage-list {
-  @include border-radius(6px 6px 0 0);
-  border:1px solid #fd858d;
+  @include border-radius(6px);
+  border:1px solid #fee3e3;
   a {
     &:hover {
       text-decoration:none;
@@ -11,7 +11,7 @@
     background:#fd858d;
     color:#fff;
     font-size:15px;
-    padding:5px 20px;
+    padding:0 20px;
   }
   .inner {
     padding:20px;
@@ -45,6 +45,15 @@
         text-indent:-9999px;
       }
     }
+    .btn.delete {
+      background:url(/images/delete.png) no-repeat center #eae9e9;
+      text-indent:-9999px;
+      width:15px;
+      border: 1px solid #ccc;
+      &:hover {
+        background-color:#eee;
+      }
+    }
     .select {
       padding-left:10px;
       color:#666;
@@ -62,6 +71,12 @@
       border-right:1px solid #eee;
       text-align:center;
       color:#903232;
+    }
+    .arrow a {
+      @include inline-block;
+      background:url(/images/arrow_dropdown.png) no-repeat center;
+      width:16px;
+      height:16px;
     }
     .title {
       text-align:left;
@@ -89,5 +104,8 @@
   .pagination {
     float:right;
     margin:0;
+    ul {
+      padding:4px 0;
+    }
   }
 }
