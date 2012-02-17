@@ -1,0 +1,93 @@
+.manage-list {
+  @include border-radius(6px 6px 0 0);
+  border:1px solid #fd858d;
+  a {
+    &:hover {
+      text-decoration:none;
+    }
+  }
+  h2 {
+    @include border-radius(6px 6px 0 0);
+    background:#fd858d;
+    color:#fff;
+    font-size:15px;
+    padding:5px 20px;
+  }
+  .inner {
+    padding:20px;
+  }
+  .info a {
+    @include inline-block;
+    width:20px;
+    height:20px;
+    background:url(/images/info.png) no-repeat center ;
+    text-indent:-9999px;
+  }
+  .toolbar {
+    clear:both;
+    a {
+      color:#666;
+    }
+    .form-search, ul, span {
+      float:left;
+    }
+    .form-search {
+      position:relative;
+      .btn {
+        @include border-radius(0 14px 14px 0);
+        position:absolute;
+        right:1px;
+        top:1px;
+        background:url(/images/search.png) no-repeat center #fee0e0;
+        border:none;
+        width:35px;
+        height:26px;
+        text-indent:-9999px;
+      }
+    }
+    .select {
+      padding-left:10px;
+      color:#666;
+      select {
+        width:70px;
+      }
+    }
+  }
+  .table {
+    color:#666;
+    td {
+      text-align:center;
+    }
+    thead th {
+      border-right:1px solid #eee;
+      text-align:center;
+      color:#903232;
+    }
+    .title {
+      text-align:left;
+    }
+    tfoot td, thead tr {
+      background:url(/images/bg_table.png) repeat-x center;
+    }
+    tfoot td {
+      padding: 0 8px;
+    }
+    td.edit a {
+      display:block;
+      background:url(/images/edit.png) no-repeat center;
+      width:20px;
+      height:20px;
+      text-indent:-9999px;
+      margin-left:15px;
+    }
+  }
+  .total {
+    float:left;
+    line-height:36px;
+    color:#903232;
+  }
+  .pagination {
+    float:right;
+    margin:0;
+  }
+}

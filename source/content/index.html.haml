@@ -6,7 +6,7 @@
         %form
           %input{:class => "search-query"}
           %input{:type =>"submit", :value => "search", :class => "btn"}
-      %span.info
+      %span.info=link_to "說明", "#", :title => "說明"
       %ul
         %li.btn=link_to "匯出", "#", :title => "匯出"
         %li.btn=link_to "設全站分類", "#", :title => "設全站分類"
@@ -15,9 +15,9 @@
         %li.btn=link_to "設定回應", "#", :title => "設定回應"
         %li.btn=link_to "置頂", "#", :title => "置頂"
         %li.btn=link_to "刪除", "#", :title => "刪除"
-      %span 
+      %span.select 
         顯示篇數
-        %select.select
+        %select
           %option 10
           %option 20
           %option 50
@@ -38,7 +38,7 @@
           %td
             %input{:type => "checkbox"}
           %td 2012.01.12
-          %td 這是一首簡單的小情歌
+          %td.title 這是一首簡單的小情歌
           %td 音樂
           %td 閑情所寄
           %td 開放
@@ -48,7 +48,7 @@
           %td
             %input{:type => "checkbox"}
           %td 2012.01.19
-          %td 歲月靜好
+          %td.title 歲月靜好
           %td 日記
           %td 夢裏落花
           %td 隱藏
@@ -58,7 +58,7 @@
           %td
             %input{:type => "checkbox"}
           %td 2012.01.28
-          %td 我親愛的偏執狂
+          %td.title 我親愛的偏執狂
           %td 創作
           %td 猶記多情
           %td 密碼
@@ -68,7 +68,7 @@
           %td
             %input{:type => "checkbox"}
           %td 2012.01.12
-          %td 這是一首簡單的小情歌
+          %td.title 這是一首簡單的小情歌
           %td 音樂
           %td 閑情所寄
           %td 開放
@@ -78,7 +78,7 @@
           %td
             %input{:type => "checkbox"}
           %td 2012.01.19
-          %td 歲月靜好
+          %td.title 歲月靜好
           %td 日記
           %td 夢裏落花
           %td 隱藏
@@ -88,7 +88,7 @@
           %td
             %input{:type => "checkbox"}
           %td 2012.01.28
-          %td 我親愛的偏執狂
+          %td.title 我親愛的偏執狂
           %td 創作
           %td 猶記多情
           %td 密碼
@@ -99,11 +99,12 @@
           %td{:colspan => "8"}
             %span.total
               文章數（3）
-            %ul.pagination
-              %li=link_to "第一頁", "#", :title => "第一頁"
-              %li=link_to "Prev", "#", :title => "Prev"
-              %li=link_to "1", "#", :title => "1"
-              %li=link_to "2", "#", :title => "2"
-              %li=link_to "3", "#", :title => "3"
-              %li=link_to "Next", "#", :title => "Next"
-              %li=link_to "最終頁", "#", :title => "最終頁"
+            .pagination
+              %ul
+                %li=link_to "第一頁", "#", :title => "第一頁"
+                %li=link_to "Prev", "#", :title => "Prev"
+                %li.active=link_to "1", "#", :title => "1"
+                %li=link_to "2", "#", :title => "2"
+                %li=link_to "3", "#", :title => "3"
+                %li=link_to "Next", "#", :title => "Next"
+                %li=link_to "最終頁", "#", :title => "最終頁"
