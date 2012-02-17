@@ -1,18 +1,42 @@
-%script
-  $(function () {
-  $('.tabs a:last').tab('show')
-  })
 .wrapper#menu
   .tabbable.tabs-left
     %ul{:class=>"nav nav-tabs"}
-      %li.active=link_to "使用者首頁", "#userpage",:title=>"使用者首頁",:datatoggle=>"tab",:class=>"icons-userpage"
-      %li=link_to "發表文章", "#post",:title=>"發表文章",:datatoggle=>"tab",:class=>"icons-post"
-      %li=link_to "文章管理列表", "#list",:title=>"文章管理列表",:datatoggle=>"tab",:class=>"icons-list"
+      %li.dropdown.active=link_to "使用者首頁", "#userpage",:title => "使用者首頁",:class => "icons-userpage", "data-toggle" => "tab"
+      %li.dropdown=link_to "發表文章", "#post",:title => "發表文章",:class => "icons-post", "data-toggle" => "tab"
+      %li.dropdown=link_to "文章管理列表", "#list",:title =>"文章管理列表",:class =>"icons-list", "data-toggle" => "tab"
+      %li.dropdown{"data-toggle" =>"dropdown"}
+        %a{:class =>"dropdown-toggle", :href =>"#setup", :title =>"部落格設定"}
+          部落格設定
+          %b.caret
+        %ul{:class =>"dropdown-menu"}
+          %li
+            %a{:href =>"#"}基本設定
+      %li.dropdown=link_to "匯入/備份", "#backup",:title =>"匯入/備份",:class =>"icons-backup", "data-toggle" => "tab"
+      %li.dropdown=link_to "樣式管理", "#template",:title =>"樣式管理",:class =>"icons-template", "data-toggle" => "tab"
+      %li.dropdown=link_to "相簿", "#album",:title =>"相簿",:class =>"icons-album", "data-toggle" => "tab"
     .tab-content
-      #userpage{:class=>"tab-pane active"}
+      #userpage.active{:class =>"tab-pane"}
         %p 使用者首頁
-      #post{:class=>"tab-pane"}
+      #post{:class =>"tab-pane"}
         %p 發表文章
-      #list{:class=>"tab-pane"}
+      #list{:class =>"tab-pane"}
         %p 文章管理列表
-      
+      #setup{:class =>"tab-pane"}
+        %p 部落格設定
+      #backup{:class =>"tab-pane"}
+        %p 匯入/備份
+      #template{:class =>"tab-pane"}
+        %p 樣式管理
+      #album{:class =>"tab-pane"}
+        %p 相簿
+      #basetup{:class => "tab-pane"}
+        %p=link_to "基本設定", "#"
+      #adsetup{:class => "tab-pane"}
+        %p=link_to "進階設定", "#"
+  .textbox
+    %textarea{:name =>"TextArea", :class =>"textbox", :type =>"text", :row =>"50"}          
+
+:javascript
+  $(function () {
+    $('.tabs a:first').tab('show')
+  })
