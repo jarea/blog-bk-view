@@ -1,39 +1,58 @@
 .wrapper#menu
-  .tabbable.tabs-left
+  .tabs-left
     %ul{:class=>"nav nav-tabs"}
-      %li.dropdown.active=link_to "使用者首頁", "#userpage",:title => "使用者首頁",:class => "icons-userpage", "data-toggle" => "tab"
-      %li.dropdown=link_to "發表文章", "#post",:title => "發表文章",:class => "icons-post", "data-toggle" => "tab"
-      %li.dropdown=link_to "文章管理列表", "#list",:title =>"文章管理列表",:class =>"icons-list", "data-toggle" => "tab"
-      %li.dropdown{"data-toggle" =>"dropdown"}
-        %a{:class =>"dropdown-toggle", :href =>"#setup", :title =>"部落格設定"}
-          部落格設定
-          %b.caret
+      %li.active=link_to "使用者首頁", "#userpage",:title => "使用者首頁",:class => "icons-userpage", "data-toggle" => "tab"
+      %li=link_to "發表文章", "#post",:title => "發表文章",:class => "icons-post", "data-toggle" => "tab"
+      %li=link_to "文章管理列表", "#list",:title =>"文章管理列表",:class =>"icons-list", "data-toggle" => "tab"
+      %li.dropdown{"data-dropdown" =>"dropdown", :class =>"offset-right"}
+        %a.icons-setup{:class =>"dropdown-toggle", :href =>"#"}部落格設定
         %ul{:class =>"dropdown-menu"}
-          %li
-            %a{:href =>"#"}基本設定
-      %li.dropdown=link_to "匯入/備份", "#backup",:title =>"匯入/備份",:class =>"icons-backup", "data-toggle" => "tab"
-      %li.dropdown=link_to "樣式管理", "#template",:title =>"樣式管理",:class =>"icons-template", "data-toggle" => "tab"
+          %li=link_to "基本設定","#basic", "data-toggle" =>"tab"
+          %li=link_to "進階設定","#advance", "data-toggle" =>"tab"
+      %li.dropdown{"data-dropdown" =>"dropdown", :class =>"offset-right"}
+        %a.icons-backup{:class =>"dropdown-toggle", :href =>"#"}匯入/備份
+        %ul{:class => "dropdown-menu"}
+          %li=link_to "匯入","#b1", "data-toggle" =>"tab"
+          %li=link_to "備份","#b2", "data-toggle" =>"tab"
+      %li.dropdown{"data-dropdown" =>"dropdown", :class =>"offset-right"}
+        %a.icons-template{:class =>"dropdown-toggle", :href =>"#"}樣式管理
+        %ul{:class => "dropdown-menu"}
+          %li=link_to "樣式1","#s1", "data-toggle" =>"tab"
+          %li=link_to "樣式2","#s2", "data-toggle" =>"tab"
       %li.dropdown=link_to "相簿", "#album",:title =>"相簿",:class =>"icons-album", "data-toggle" => "tab"
     .tab-content
       #userpage.active{:class =>"tab-pane"}
         %p 使用者首頁
+        %span=lorem.sentences (3)
       #post{:class =>"tab-pane"}
         %p 發表文章
+        %span=lorem.sentences (3)
       #list{:class =>"tab-pane"}
         %p 文章管理列表
-      #setup{:class =>"tab-pane"}
-        %p 部落格設定
-      #backup{:class =>"tab-pane"}
-        %p 匯入/備份
-      #template{:class =>"tab-pane"}
-        %p 樣式管理
+        %span=lorem.sentences (3)
+      #basic{:class =>"tab-pane"}
+        %p 基本設定
+        %span=lorem.sentences (3)
+      #advance{:class =>"tab-pane"}
+        %p 進階設定
+        %span=lorem.sentences (3)
+      #b1{:class =>"tab-pane"}
+        %p 匯入
+        %span=lorem.sentences (3)
+      #b2{:class =>"tab-pane"}
+        %p 備份
+        %span=lorem.sentences (3)
+      #s1{:class =>"tab-pane"}
+        %p 樣式1
+        %span=lorem.sentences (3)
+      #s2{:class =>"tab-pane"}
+        %p 樣式2
+        %span=lorem.sentences (3)
       #album{:class =>"tab-pane"}
         %p 相簿
-      #basetup{:class => "tab-pane"}
-        %p=link_to "基本設定", "#"
-      #adsetup{:class => "tab-pane"}
-        %p=link_to "進階設定", "#"
-  .textbox
+        %span=lorem.sentences (3)
+   
+  .textbox        
     %textarea{:name =>"TextArea", :class =>"textbox", :type =>"text", :row =>"50"}          
 
 :javascript

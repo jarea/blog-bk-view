@@ -7,7 +7,7 @@
 
 #menu{
   width:100%;
-  padding:20px;
+  padding:10px;
   li{
     a{
       color:#903232;
@@ -18,7 +18,7 @@
       line-height:20px;
       height:20px;
       width:100px;
-      background-color:#fffbf7;
+      // background-color:#fffbf7;
     }
   }
   .textbox{
@@ -26,12 +26,12 @@
   }
 }
 
-#menu .tabbable.tabs-left{
-  background-color:#fffbf7;
-}
+// #menu .tabbable.tabs-left{
+  // background-color:#fffbf7;
+// }
 
-#menu{
-  a.active{
-    background-color:#903232;
-  }
-}
+// #menu{
+  // a.active{
+    // background-color:#903232;
+  // }
+// }
