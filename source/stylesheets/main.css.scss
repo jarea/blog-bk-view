@@ -2,36 +2,37 @@
 @include global-reset;
 
 @import "icons";
-
-
+$color:#fffbf7;
 
 #menu{
   width:100%;
   padding:10px;
+  // background-color:$color;
   li{
     a{
+      padding-bottom:10px;
       color:#903232;
       text-decoration:none;
       font-size:13px;
       padding-left:30px;
       display:inline-block;
-      line-height:20px;
+      // line-height:20px;
       height:20px;
-      width:100px;
+      width:80px;
+      &:hover{
+        color:#fff;
+        background-color:#903232;
+      }
+      
       // background-color:#fffbf7;
     }
   }
-  .textbox{
-    width:100px;
-  }
 }
 
-// #menu .tabbable.tabs-left{
-  // background-color:#fffbf7;
-// }
+.textbox{
+  width:120px;
+}
 
-// #menu{
-  // a.active{
-    // background-color:#903232;
-  // }
-// }
+.icons-post{
+  line-height:20px;
+}
