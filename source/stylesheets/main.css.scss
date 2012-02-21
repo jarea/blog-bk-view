@@ -6,33 +6,48 @@ $color:#fffbf7;
 
 #menu{
   width:100%;
-  padding:10px;
-  // background-color:$color;
+  padding:20px;
+  background-color:$color;
   li{
     a{
-      padding-bottom:10px;
       color:#903232;
       text-decoration:none;
       font-size:13px;
       padding-left:30px;
       display:inline-block;
-      // line-height:20px;
-      height:20px;
-      width:80px;
+      line-height:3px;
+      height:10px;
+      width:100px;
+      margin:0px -1px 10px 0;
+      padding:10px 5px 10px 30px;
       &:hover{
         color:#fff;
         background-color:#903232;
       }
-      
-      // background-color:#fffbf7;
     }
   }
+  .nav{
+    background:$color;
+  }
+  .tab-content{
+    background-color:#fff;
+  }
+  .tab-pane{
+    padding-top:10px;
+    border-top:1px solid #DDD;
+    border-right:1px solid #DDD;
+    @include border-top-right-radius(6px); 
+  }
 }
-
+.nav.nav-tabs{
+  li{
+    
+  }
+}
 .textbox{
-  width:120px;
+  width:100px;
+}
+.open > .dropdown-toggle, .dropdown.open > .dropdown-toggle{
+  background-color:darken($color, 20%);  
 }
 
-.icons-post{
-  line-height:20px;
-}

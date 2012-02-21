@@ -1577,7 +1577,7 @@ table .span12 {
 .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #0088cc;
+  /*background-color: #0088cc;*/
 }
 .dropdown.open {
   *z-index: 1000;
@@ -2236,7 +2236,8 @@ button.btn.small, input[type="submit"].btn.small {
 .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > .open.active > a:hover {
   color: #ffffff;
   background-color: #999999;
-  border-color: #999999;
+  border-color:#ddd;
+  /*border-color: #999999;*/
 }
 .nav .open .caret, .nav .open.active .caret, .nav .open a:hover .caret {
   border-top-color: #ffffff;
@@ -2299,9 +2300,9 @@ button.btn.small, input[type="submit"].btn.small {
 }
 .tabs-left .nav-tabs > li > a {
   margin-right: -1px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 6px 0 0 6px;
+  -moz-border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
 }
 .tabs-left .nav-tabs > li > a:hover {
   border-color: #eeeeee #dddddd #eeeeee #eeeeee;

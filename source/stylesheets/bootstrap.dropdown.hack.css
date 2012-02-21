@@ -9,7 +9,7 @@
 .open .dropdown-toggle,.dropdown.open .dropdown-toggle{color:gray;background:none;}
 .open .menu-dropdown,.dropdown.open .menu-dropdown,.open .dropdown-menu,.dropdown.open .dropdown-menu{display:none;}
 
-.open > .dropdown-toggle,.dropdown.open > .dropdown-toggle{color:#ffffff;background:#ccc;background:rgba(0, 0, 0, 0.3);}
+.open > .dropdown-toggle,.dropdown.open > .dropdown-toggle{color:#fffbf7;background:#fffbf7;background-color:#F3EFEA;/*rgba(0, 0, 0, 0.1);*/}
 .open > .menu-dropdown,.dropdown.open > .menu-dropdown,.open > .dropdown-menu,.dropdown.open > .dropdown-menu{
 	display:block;
 	float:right;
