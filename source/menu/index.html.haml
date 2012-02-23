@@ -1,60 +1,10 @@
 .wrapper#menu
-  .tabs-left
-    %ul{:class=>"nav nav-tabs"}
-      %li.active=link_to "使用者首頁", "#userpage",:title => "使用者首頁",:class => "icons-userpage", "data-toggle" => "tab"
-      %li=link_to "發表文章", "#post",:title => "發表文章",:class => "icons-post", "data-toggle" => "tab"
-      %li=link_to "文章管理列表", "#list",:title =>"文章管理列表",:class =>"icons-list", "data-toggle" => "tab"
-      %li.dropdown{"data-dropdown" =>"dropdown", :class =>"offset-right"}
-        %a.icons-setup{:class =>"dropdown-toggle", :href =>"#"}部落格設定
-        %ul{:class =>"dropdown-menu"}
-          %li=link_to "基本設定","#basic", "data-toggle" =>"tab"
-          %li=link_to "進階設定","#advance", "data-toggle" =>"tab"
-      %li.dropdown{"data-dropdown" =>"dropdown", :class =>"offset-right"}
-        %a.icons-backup{:class =>"dropdown-toggle", :href =>"#"}匯入/備份
-        %ul{:class => "dropdown-menu"}
-          %li=link_to "匯入","#b1", "data-toggle" =>"tab"
-          %li=link_to "備份","#b2", "data-toggle" =>"tab"
-      %li.dropdown{"data-dropdown" =>"dropdown", :class =>"offset-right"}
-        %a.icons-template{:class =>"dropdown-toggle", :href =>"#"}樣式管理
-        %ul{:class => "dropdown-menu"}
-          %li=link_to "樣式1","#s1", "data-toggle" =>"tab"
-          %li=link_to "樣式2","#s2", "data-toggle" =>"tab"
-      %li.dropdown=link_to "相簿", "#album",:title =>"相簿",:class =>"icons-album", "data-toggle" => "tab"
-    .tab-content
-      #userpage.active{:class =>"tab-pane"}
-        %p 使用者首頁
-        %span=lorem.sentences (18)
-      #post{:class =>"tab-pane"}
-        %p 發表文章
-        %span=lorem.sentences (16)
-      #list{:class =>"tab-pane"}
-        %p 文章管理列表
-        %span=lorem.sentences (18)
-      #basic{:class =>"tab-pane"}
-        %p 基本設定
-        %span=lorem.sentences (18)
-      #advance{:class =>"tab-pane"}
-        %p 進階設定
-        %span=lorem.sentences (18)
-      #b1{:class =>"tab-pane"}
-        %p 匯入
-        %span=lorem.sentences (18)
-      #b2{:class =>"tab-pane"}
-        %p 備份
-        %span=lorem.sentences (20)
-      #s1{:class =>"tab-pane"}
-        %p 樣式1
-        %span=lorem.sentences (18)
-      #s2{:class =>"tab-pane"}
-        %p 樣式2
-        %span=lorem.sentences (18)
-      #album{:class =>"tab-pane"}
-        %p 相簿
-        %span=lorem.sentences (19)
-    .textbox        
-      %textarea{:name =>"TextArea", :class =>"textbox", :type =>"text"}              
-
-:javascript
-  $(function () {
-    $('.tabs a:first').tab('show')
-  })
+  %ul
+    %li.active=link_to "使用者首頁", "#",:title => "使用者首頁",:class => "icons-userpage"
+    %li=link_to "發表文章", "#",:title => "發表文章",:class => "icons-post"
+    %li=link_to "文章管理列表", "#",:title =>"文章管理列表",:class =>"icons-list"
+    %li=link_to "部落格設定","#", :title =>"部落格設定",:class =>"icons-setup"
+    %li=link_to "匯入/備份","#", :title =>"匯入/備份",:class =>"icons-backup"
+    %li=link_to "樣式管理","#", :title =>"樣式管理",:class =>"icons-template"
+    %li=link_to "相簿","#", :title =>"相簿",:class =>"icons-album"
+        

@@ -3,12 +3,6 @@
   %head
     %meta{:charset => "utf-8"}
     = stylesheet_link_tag "main"
-    = stylesheet_link_tag "bootstrap.css"
-    = stylesheet_link_tag "bootstrap.dropdown.hack.css"
-    = javascript_include_tag "bootstrap.js"
-    = javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-    = javascript_include_tag "http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"
-    = javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"
     = yield_content :head
   %body{:class => page_classes}
     = yield

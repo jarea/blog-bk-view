@@ -13,13 +13,12 @@ $color:#fffbf7;
       color:#903232;
       text-decoration:none;
       font-size:13px;
-      padding-left:30px;
       display:inline-block;
-      line-height:3px;
-      height:10px;
+      line-height:15px;
+      height:25px;
       width:100px;
-      margin:0px -1px 10px 0;
-      padding:10px 5px 10px 30px;
+      margin:5px 0;
+      padding:5px 5px 0px 30px;
       &:hover{
         color:#fff;
         background-color:#903232;
@@ -39,15 +38,13 @@ $color:#fffbf7;
     @include border-top-right-radius(6px); 
   }
 }
-.nav.nav-tabs{
-  li{
-    
-  }
-}
+
 .textbox{
   width:100px;
 }
 .open > .dropdown-toggle, .dropdown.open > .dropdown-toggle{
   background-color:darken($color, 20%);  
 }
-
+.icons-post{
+  
+}
