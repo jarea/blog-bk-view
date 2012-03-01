@@ -1,27 +1,8 @@
 .manage-list {
-  @include border-radius(6px);
-  border:1px solid #fee3e3;
   a {
     &:hover {
       text-decoration:none;
     }
-  }
-  h2 {
-    @include border-radius(6px 6px 0 0);
-    background:#fd858d;
-    color:#fff;
-    font-size:15px;
-    padding:0 20px;
-  }
-  .inner {
-    padding:20px;
-  }
-  .info a {
-    @include inline-block;
-    width:20px;
-    height:20px;
-    background:url(/images/info.png) no-repeat center ;
-    text-indent:-9999px;
   }
   .toolbar {
     clear:both;
@@ -108,4 +89,12 @@
       padding:4px 0;
     }
   }
+}
+
+.info a {
+  @include inline-block;
+  width:20px;
+  height:20px;
+  background:url(/images/info.png) no-repeat center ;
+  text-indent:-9999px;
 }

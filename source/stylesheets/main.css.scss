@@ -33,3 +33,19 @@ a {
 #main {
   padding: 50px;
 }
+
+h2.heading {
+  @include border-radius(6px 6px 0 0);
+  background:#fd858d;
+  color:#fff;
+  font-size:15px;
+  padding:0 20px;
+}
+
+.frame {
+  @include border-radius(6px);
+  border:1px solid #fee3e3;
+  .inner {
+    padding:20px;
+  }
+}
