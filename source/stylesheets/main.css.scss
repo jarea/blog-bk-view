@@ -18,6 +18,7 @@ $side-gutter-width: $gutter-width;
 
 @include global-reset;
 @import "header";
+@import "bootstrap";
 @import "managelist";
 @import "post";
 @import "footer";
@@ -29,10 +30,6 @@ body {
 
 a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
-}
-
-#main {
-  padding: 50px;
 }
 
 h2.heading {
