@@ -17,8 +17,10 @@ $gutter-width: 1em;
 $side-gutter-width: $gutter-width;
 
 @include global-reset;
+@import "bootstrap-bk";
+@import "icons";
 @import "header";
-@import "bootstrap";
+@import "menu";
 @import "managelist";
 @import "post";
 @import "footer";
@@ -26,10 +28,15 @@ $side-gutter-width: $gutter-width;
 body {
   font-family: $font-family;
   color: $font-color; 
+  background-color:#fffbf7;
 }
 
 a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
+}
+
+#bd .inner {
+  @include clearfix;
 }
 
 h2.heading {
@@ -41,6 +48,7 @@ h2.heading {
 }
 
 .frame {
+  background:#fff;
   @include border-radius(6px);
   border:1px solid #fee3e3;
   .inner {
